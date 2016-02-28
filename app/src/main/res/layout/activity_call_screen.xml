@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:orientation="vertical" android:layout_gravity="center" android:gravity="center">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sta_accepted"
+        android:layout_marginTop="128dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </TextView>
+    <TextView
+        android:text="TextView"
+        android:textSize="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/callscreen_remote"
+        android:layout_below="@+id/sta_accepted"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp">
+
+    </TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hngUpbutton"
+        android:background="@drawable/call_cancel_button"
+        android:text="End Call"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </Button>
+    <Button android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/mute"
+        android:text="Mute"
+        android:layout_above="@+id/hngUpbutton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="53dp"
+        android:layout_marginEnd="53dp">
+    </Button>
+    <Button android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Speaker"
+        android:layout_above="@+id/hngUpbutton"
+        android:layout_marginLeft="53dp"
+        android:layout_marginEnd="53dp"
+        android:id="@+id/speaker">
+    </Button>
+</RelativeLayout>

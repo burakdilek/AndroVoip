@@ -1,0 +1,7 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/arama_kaydi_selected" android:state_selected="true"/>
+
+    <item android:drawable="@drawable/arama_kaydi" android:state_selected="false"/>
+</selector>

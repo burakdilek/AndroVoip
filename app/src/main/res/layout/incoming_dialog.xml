@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/accept_dialog"
+        android:text="Accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_accept_button"
+        android:layout_alignTop="@+id/reject_dialog"
+        android:layout_alignRight="@+id/info_dialog"
+        android:layout_alignEnd="@+id/info_dialog" />
+
+    <Button
+        android:id="@+id/reject_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reject"
+        android:background="@drawable/call_cancel_button"
+        android:layout_marginTop="68dp"
+        android:layout_below="@+id/info_dialog"
+        android:layout_alignLeft="@+id/info_dialog"
+        android:layout_alignStart="@+id/info_dialog" />
+
+    <TextView
+        android:id="@+id/info_dialog"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/blueframe"
+        android:gravity="center"
+        android:textColor="#0099FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

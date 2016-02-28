@@ -1,0 +1,2 @@
+include ':app', ':android-ngn-stack'
+project(':android-ngn-stack').projectDir = new File('app/libs/android-ngn-stack')
