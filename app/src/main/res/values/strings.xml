@@ -21,4 +21,9 @@
     <string name="title_activity_receive_call">ReceiveCallActivity</string>
     <string name="title_activity_call_screen">CallScreen</string>
     <string name="title_activity_receive">ReceiveActivity</string>
+    <string name="title_activity_display_contact">DisplayContact</string>
+    <string name="sent">Sent!</string>
+    <string name="unableToSent">Unable to send!</string>
+
+
 </resources>

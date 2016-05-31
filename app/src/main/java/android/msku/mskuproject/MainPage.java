@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -15,10 +16,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import org.doubango.ngn.NgnEngine;
@@ -42,19 +44,18 @@ import java.util.List;
 
 public class MainPage extends AppCompatActivity {
 
+    String num;
     private Toolbar toolbar;
-    private TabLayout tabLayout;
+    public static TabLayout tabLayout;
     private ViewPager viewPager;
     private Dialog incoming_dialog;
     private boolean is_in_call = false;
 
-
-    EditText number;
-    Button callb,acceptButton,rejectButton;
+    Button callb, acceptButton, rejectButton;
     TextView incoming_info;
 
-    String publicId, realm, port, proxy, username, password;
-
+    String publicId,port, proxy, username, password;
+    public static String realm;
     private static String TAG = LoginActivity.class.getCanonicalName();
     private BroadcastReceiver broadcastReceiver;
 
@@ -63,6 +64,11 @@ public class MainPage extends AppCompatActivity {
     private final INgnConfigurationService confService;
 
     private NgnAVSession mAVSession;
+    private static MainPage inst;
+
+    public static MainPage instance() {
+        return inst;
+    }
 
     public MainPage() {
         engine = NgnEngine.getInstance();
@@ -74,11 +80,45 @@ public class MainPage extends AppCompatActivity {
                 tdav_codec_id_t.tdav_codec_id_pcma.swigValue() |
                         tdav_codec_id_t.tdav_codec_id_pcmu.swigValue() |
                         tdav_codec_id_t.tdav_codec_id_red.swigValue() |
-                        tdav_codec_id_t.tdav_codec_id_t140.swigValue()
+                        tdav_codec_id_t.tdav_codec_id_t140.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_g722.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_h264_bp.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_speex_nb.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_vp8.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_amr_nb_be.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_opus.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_none.swigValue() |
+                        tdav_codec_id_t.tdav_codec_id_vp8.swigValue()
         );
         confService.commit();
     }
+    SharedPreferences sharedpreferences;
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main_page, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_exit:
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.clear();
+                editor.commit();
+                Intent loginIntent = new Intent(MainPage.this, LoginActivity.class);
+                startActivity(loginIntent);
+                finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,9 +128,12 @@ public class MainPage extends AppCompatActivity {
         incoming_dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         incoming_dialog.setContentView(R.layout.incoming_dialog);
         incoming_dialog.getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
-        acceptButton = (Button)incoming_dialog.findViewById(R.id.accept_dialog);
-        rejectButton = (Button)incoming_dialog.findViewById(R.id.reject_dialog);
-        incoming_info = (TextView)incoming_dialog.findViewById(R.id.info_dialog);
+        incoming_dialog.setCancelable(false);
+        acceptButton = (Button) incoming_dialog.findViewById(R.id.accept_dialog);
+        rejectButton = (Button) incoming_dialog.findViewById(R.id.reject_dialog);
+        incoming_info = (TextView) incoming_dialog.findViewById(R.id.info_dialog);
+
+        inst = this;
         acceptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,12 +163,18 @@ public class MainPage extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
+        sharedpreferences = getSharedPreferences(LoginActivity.prefs, Context.MODE_PRIVATE);
+        username = sharedpreferences.getString("username", null);
+        password  = sharedpreferences.getString("password",null);
+        realm = sharedpreferences.getString("domain",null);
+        proxy =sharedpreferences.getString("proxy",null);
+        port = sharedpreferences.getString("port",null);
 
-        port = getIntent().getStringExtra("port");
-        realm = getIntent().getStringExtra("domain");
-        proxy = getIntent().getStringExtra("proxy");
-        username = getIntent().getStringExtra("username");
-        password = getIntent().getStringExtra("password");
+        Intent mServiceIntent = new Intent(this, ConnectionManager.class);
+        mServiceIntent.putExtra("event", 0);
+        mServiceIntent.putExtra("username", username);
+        mServiceIntent.putExtra("password", password);
+        startService(mServiceIntent);
         System.out.println(username + " " + password + " " + realm + " " + port + " " + proxy + " " + publicId);
 
 
@@ -144,32 +193,24 @@ public class MainPage extends AppCompatActivity {
                         return;
                     }
                     toolbar.setTitle(username);
+                    tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
                     switch (args.getEventType()) {
                         case REGISTRATION_NOK:
-                            tabLayout.setBackgroundColor(Color.RED);
-                            tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-                            toolbar.setBackgroundColor(Color.RED);
+
                             toolbar.setTitleTextColor(Color.LTGRAY);
                             break;
                         case UNREGISTRATION_OK:
-                            tabLayout.setBackgroundColor(Color.RED);
-                            tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-                            toolbar.setBackgroundColor(Color.RED);
                             toolbar.setTitleTextColor(Color.LTGRAY);
                             System.out.println(username + " " + password + " " + realm + " " + port + " " + proxy + " " + publicId);
                             break;
                         case REGISTRATION_OK:
                             //    status.setText("You are now registered");
-                            tabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                            tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-                            toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
                             toolbar.setTitleTextColor(Color.GREEN);
                             break;
                         case REGISTRATION_INPROGRESS:
                             //  status.setText("Trying to register...");
-                            tabLayout.setBackgroundColor(getResources().getColor(R.color.tryingcolor));
-                            tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-                            toolbar.setBackgroundColor(getResources().getColor(R.color.tryingcolor));
+                            toolbar.setTitleTextColor(Color.GRAY);
                             break;
                         case UNREGISTRATION_INPROGRESS:
                             //  status.setText("Trying to unregister...");
@@ -200,6 +241,7 @@ public class MainPage extends AppCompatActivity {
                             incoming_info.setText(mAVSession.getRemotePartyDisplayName());
                             incoming_dialog.show();
                             engine.getSoundService().startRingTone();
+                            System.out.println("incoming");
 
                             break;
                         case EARLY_MEDIA:
@@ -213,9 +255,12 @@ public class MainPage extends AppCompatActivity {
                         case TERMINATED:
                             engine.getSoundService().stopRingTone();
                             engine.getSoundService().stopRingBackTone();
-                            if(is_in_call){
+                            if (is_in_call) {
                                 CallScreen.This.finish();
                                 is_in_call = false;
+                            }
+                            if(incoming_dialog.isShowing()){
+                                incoming_dialog.cancel();
                             }
                             mAVSession = null;
                             break;
@@ -236,9 +281,9 @@ public class MainPage extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new Call(), "CALL");
-        adapter.addFragment(new Contacts(), "CONT");
-        adapter.addFragment(new Message(), "MSG");
+        adapter.addFragment(new Call(), "ARAMA");
+        adapter.addFragment(new Contacts(), "REHBER");
+        adapter.addFragment(new Messaging(), "MESAJ");
         viewPager.setAdapter(adapter);
     }
 
@@ -246,7 +291,7 @@ public class MainPage extends AppCompatActivity {
         if (engine.isStarted()) {
             if (!service.isRegistered()) {
                 //Set User Credentials
-                String userId = "sip:" + username + "@sip2sip.info";
+                String userId = "sip:" + username + "@" + realm;
 
                 confService.putString(NgnConfigurationEntry.IDENTITY_IMPU,
                         userId);
@@ -273,6 +318,7 @@ public class MainPage extends AppCompatActivity {
             // status.setText("Engine not started yet");
         }
     }
+
     private String getStateDesc(NgnInviteSession.InviteState state) {
         switch (state) {
             case NONE:
@@ -294,6 +340,7 @@ public class MainPage extends AppCompatActivity {
                 return "termibated";
         }
     }
+
     @Override
     protected void onDestroy() {
         // Stops the engine
@@ -356,6 +403,65 @@ public class MainPage extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+
+
+    public void bir(View view) {
+        Call.no.setText(Call.no.getText() + "1");
+    }
+
+    public void iki(View view) {
+
+        Call.no.setText(Call.no.getText() + "2");
+    }
+
+    public void uc(View view) {
+        Call.no.setText(Call.no.getText() + "3");
+    }
+
+    public void dort(View view) {
+        Call.no.setText(Call.no.getText() + "4");
+    }
+
+    public void bes(View view) {
+        Call.no.setText(Call.no.getText() + "5");
+    }
+
+    public void alti(View view) {
+        Call.no.setText(Call.no.getText() + "6");
+    }
+
+    public void yedi(View view) {
+        Call.no.setText(Call.no.getText() + "7");
+    }
+
+    public void sekiz(View view) {
+        Call.no.setText(Call.no.getText() + "8");
+    }
+
+    public void dokuz(View view) {
+        Call.no.setText(Call.no.getText() + "9");
+    }
+
+    public void yildiz(View view) {
+        Call.no.setText(Call.no.getText() + "*");
+    }
+
+    public void sifir(View view) {
+        Call.no.setText(Call.no.getText() + "0");
+    }
+
+    public void diyez(View view) {
+        Call.no.setText(Call.no.getText() + "#");
+    }
+
+    public void sil(View view) {
+        num = Call.no.getText().toString();
+        if (num.length() == 0) {
+        } else {
+            Call.no.setText(num.substring(0, num.length() - 1));
+        }
+
     }
 }
 

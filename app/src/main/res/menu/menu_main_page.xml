@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="android.msku.mskuproject.MainPage">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_exit" android:title="Çıkış"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@drawable/ic_exit_to_app_white_24dp"/>
 </menu>

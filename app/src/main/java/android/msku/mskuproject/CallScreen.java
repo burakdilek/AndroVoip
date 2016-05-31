@@ -109,19 +109,19 @@ public class CallScreen extends AppCompatActivity {
                 return "Unknown";
             case INCOMING:
 
-                return "Incoming";
+                return "Gelen Arama";
             case INPROGRESS:
-                return "Inprogress";
+                return "Aranıyor";
             case REMOTE_RINGING:
-                return "Ringing";
+                return "Çalıyor";
             case EARLY_MEDIA:
                 return "Early media";
             case INCALL:
-                return "In Call";
+                return "Arama";
             case TERMINATING:
                 return "Terminating";
             case TERMINATED:
-                return "terminated";
+                return "Sonlandırıldı";
         }
     }
 

@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEND"
+        android:text="Gönder"
         android:id="@+id/sendButton"
         android:layout_alignTop="@+id/messageContent"
         android:layout_alignParentRight="true"

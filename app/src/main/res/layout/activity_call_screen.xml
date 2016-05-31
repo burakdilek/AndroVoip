@@ -27,10 +27,10 @@
     </TextView>
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+
         android:id="@+id/hngUpbutton"
         android:background="@drawable/call_cancel_button"
-        android:text="End Call"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -41,19 +41,24 @@
     <Button android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/mute"
-        android:text="Mute"
+        android:text="SESSİZ"
         android:layout_above="@+id/hngUpbutton"
+        android:background="@drawable/tus"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="53dp"
-        android:layout_marginEnd="53dp">
+        android:layout_marginEnd="5dp">
     </Button>
     <Button android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Speaker"
+        android:text="Hoparlör"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tus"
         android:layout_above="@+id/hngUpbutton"
         android:layout_marginLeft="53dp"
         android:layout_marginEnd="53dp"
-        android:id="@+id/speaker">
+        android:id="@+id/speaker"
+        android:layout_marginRight="53dp">
     </Button>
 </RelativeLayout>

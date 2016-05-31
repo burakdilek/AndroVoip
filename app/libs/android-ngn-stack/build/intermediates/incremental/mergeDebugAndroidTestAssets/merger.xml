@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="debug"><source path="/home/erkanderon/development/clones/trashclones/imsdroid/android-ngn-stack/build/intermediates/bundles/debug/assets"/></dataSet><dataSet config="main"><source path="/home/erkanderon/development/clones/trashclones/imsdroid/android-ngn-stack/src/androidTest/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="debug"><source path="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/libs/android-ngn-stack/build/intermediates/bundles/debug/assets"/></dataSet><dataSet config="main"><source path="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/libs/android-ngn-stack/src/androidTest/assets"/></dataSet></merger>

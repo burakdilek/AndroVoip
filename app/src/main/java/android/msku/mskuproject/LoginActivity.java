@@ -5,9 +5,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -42,6 +44,10 @@ import static android.Manifest.permission.READ_CONTACTS;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
     Toolbar toolbar;
+    SharedPreferences sharedpreferences;
+    public static String prefs = "prefs";
+    Intent mainIntent;
+
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -79,6 +85,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mProxyView = (AutoCompleteTextView) findViewById(R.id.proxy);
         mPortView = (AutoCompleteTextView) findViewById(R.id.port);
         populateAutoComplete();
+
+        mainIntent = new Intent(LoginActivity.this, MainPage.class);;
+
+        sharedpreferences = getSharedPreferences(prefs, Context.MODE_PRIVATE);
+        String sun = sharedpreferences.getString("username", null);
+        String spass = sharedpreferences.getString("password",null);
+        String sdomain = sharedpreferences.getString("domain",null);
+        String sproxy =sharedpreferences.getString("proxy",null);
+        String sport = sharedpreferences.getString("port",null);
+
+        if(sun != null & spass != null & sdomain != null & sproxy != null & sport != null){
+            startActivity(mainIntent);
+            finish();
+        }
+
+
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -355,14 +377,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
             try {
-                Intent intent = new Intent(LoginActivity.this, MainPage.class);
-                intent.putExtra("username", mEmail);
-                intent.putExtra("password",mPassword);
-                intent.putExtra("domain",mDomain);
-                intent.putExtra("proxy",mProxy);
-                intent.putExtra("port",mPort);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                startActivity(intent);
+
+                editor.putString("username", mEmail);
+                editor.putString("password",mPassword);
+                editor.putString("domain",mDomain);
+                editor.putString("proxy",mProxy);
+                editor.putString("port",mPort);
+                editor.commit();
+                startActivity(mainIntent);
                 // Simulate network access.
                 Thread.sleep(2000);
 

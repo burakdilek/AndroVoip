@@ -16,14 +16,13 @@ import org.doubango.ngn.utils.NgnUriUtils;
 
 
 public class Call extends Fragment {
-
-    EditText number;
+    static EditText no;
     Button callb, bosb;
     MainPage mp;
 
 
     public final static String EXTRAT_SIP_SESSION_ID = "SipSession";
-    public final static String PHONE_NUMBER_EXTRA = "sip:elift@sip2sip.info";
+
     public Call() {
         // Required empty public constructor
     }
@@ -43,9 +42,8 @@ public class Call extends Fragment {
 
 
         callb = (Button) rootView.findViewById(R.id.callButton);
-        number = (EditText) rootView.findViewById(R.id.editText);
+        no = (EditText) rootView.findViewById(R.id.editText);
         bosb = (Button) rootView.findViewById(R.id.bos);
-
 
 
         mp = new MainPage();
@@ -53,36 +51,38 @@ public class Call extends Fragment {
         callb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeVoiceCall(number.getText().toString());
+                if(!(no.length() <= 2)) {
+                    makeVoiceCall(no.getText().toString());
+                }
             }
         });
         bosb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number.setEnabled(true);
-                number.requestFocus();
+                no.setEnabled(true);
+                no.requestFocus();
 
-                         }
+            }
         });
 
 
         return rootView;
     }
-    boolean makeVoiceCall(String phoneNumber){
 
-        final String validUri = NgnUriUtils.makeValidSipUri(String.format("sip:%s@%s", phoneNumber, "sip2sip.info"));
-        if(validUri == null){
+    boolean makeVoiceCall(String phoneNumber) {
+
+        final String validUri = NgnUriUtils.makeValidSipUri(String.format("sip:%s@%s", phoneNumber, MainPage.realm));
+        if (validUri == null) {
             Log.i("TAG", "failed to normalize sip uri '" + phoneNumber + "'");
             return false;
         }
         NgnAVSession avSession = NgnAVSession.createOutgoingSession(mp.service.getSipStack(), NgnMediaType.Audio);
 
         Intent i = new Intent();
-        i.setClass(this.getContext() , CallScreen.class);
+        i.setClass(this.getContext(), CallScreen.class);
         i.putExtra(EXTRAT_SIP_SESSION_ID, avSession.getId());
         startActivity(i);
 
         return avSession.makeCall(validUri);
     }
-
 }

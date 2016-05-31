@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-im/4.1.3/f8ddb93de579ec1e3b1edc9a5e35b6421b2083de/smack-im-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f8ddb93de579ec1e3b1edc9a5e35b6421b2083de">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-im-4.1.3_414d60ceb6510dc089070c439c8f5743d225f041.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.3.0_265031475607fb403ad4f98cfbb5da0169cf11c1.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_dd026ff0a926872eb227142f534194de9a82452f.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_360970978ddc484ab93035085f4e2e5437409fb0.jar" />
+    </item>
+    <item
+        jar="/home/the/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_dcb36bd241a67fb2ac5e20bf6969aba28190f78e.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-core/4.1.3/bd2c1094cc7770e456da9b49a32b5d82e7cb5ac5/smack-core-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="bd2c1094cc7770e456da9b49a32b5d82e7cb5ac5">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-core-4.1.3_9a519139a2938ce79704d260a8d6b1a1c0c4f4fe.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-android/4.1.3/736dcaa69d0781a36bdbdc32539a99e5fe121f02/smack-android-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="736dcaa69d0781a36bdbdc32539a99e5fe121f02">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-android-4.1.3_3770e99a9caddc8e5d8c682bf4a33837e16eaf80.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.3.0_7bbf8c4ca81cf331236e1bf5253de5a42c0c75e6.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.jxmpp/jxmpp-core/0.4.2-beta1/14ade1a89b0f6db4fa481f9f8a721cdec69374de/jxmpp-core-0.4.2-beta1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="14ade1a89b0f6db4fa481f9f8a721cdec69374de">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/jxmpp-core-0.4.2-beta1_bc3702d98904d77334c28e597d0fb026dd3fcde1.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-sasl-provided/4.1.3/9a3f4111627fa29eb3ba8fe0977990fe154f9fcc/smack-sasl-provided-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="9a3f4111627fa29eb3ba8fe0977990fe154f9fcc">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-sasl-provided-4.1.3_a3b9368039ec8e0d2a3aff4095e457bbc1c184c4.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/de.measite.minidns/minidns/0.1.7/993582d1455b93a5723d2af4b39d8679735b3550/minidns-0.1.7.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="993582d1455b93a5723d2af4b39d8679735b3550">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/minidns-0.1.7_f7f51894144a62d691209390e2ee09f851d1117c.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_1bffcddf4db46735e17c659093a08e3b322c6713.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.jxmpp/jxmpp-util-cache/0.4.2-beta1/43e2a81f52600639daeb02ede60cc498a13614a5/jxmpp-util-cache-0.4.2-beta1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="43e2a81f52600639daeb02ede60cc498a13614a5">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/jxmpp-util-cache-0.4.2-beta1_1bc5fddea49f81623144acf3a7b74e6f92ce8fa5.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/eventbus-2.4.0_7437c7732618fe527a462176899d4999dd50f37b.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/mskusoftphone-doubango/android-ngn-stack/unspecified/jars/libs/simple-xml-2.3.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8ee173e95cae65024518ad05e52def6bca498366">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/simple-xml-2.3.4_649879c4cebe120956437abc67d9cab515a7399b.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="482a38c6127d263abd914709144f0e79e4249ede">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e1b9255c4b33c6ec9751fe4837cfa70c6c902d1e.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_c5d0343bf65b2e790821e52d40f3dc2ee45a7ca7.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_cbede482030d6a8a66f9de2352177a0f95c902b0.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-android-extensions/4.1.3/af2e8f8c4c9c68682208b225ec40f734f3c7fab9/smack-android-extensions-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="af2e8f8c4c9c68682208b225ec40f734f3c7fab9">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-android-extensions-4.1.3_611678a3c190a4df139d5ae90a5c1a2b3c9339d6.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-resolver-minidns/4.1.3/f3b9097016923a90654e5ca5063561949e79c7b8/smack-resolver-minidns-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f3b9097016923a90654e5ca5063561949e79c7b8">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-resolver-minidns-4.1.3_83854c4f9e3feba7acfaa56db56b66c187f68096.jar" />
+    </item>
+    <item
+        jar="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c9d87e75d2a7288cb7766c99ada10f0d5e001daf">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/instant-run_0207a7c5a7173ddc7f010b141acbc6ed2757c91e.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-tcp/4.1.3/df70f27498a058be050bed8f1a48ab23af0896f5/smack-tcp-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="df70f27498a058be050bed8f1a48ab23af0896f5">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-tcp-4.1.3_5875000f60f4e55e2c34579f2a1c0b9dd5318bd9.jar" />
+    </item>
+    <item
+        jar="/home/the/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-extensions/4.1.3/5dbf13c9faca828ce1ef27b7c8efdd637113bf6e/smack-extensions-4.1.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5dbf13c9faca828ce1ef27b7c8efdd637113bf6e">
+        <dex dex="/home/the/Development/StudioProjects/mskusoftphone-doubango/app/build/intermediates/pre-dexed/debug/smack-extensions-4.1.3_dc7756eeb42d7d495192da6f6cb1fa15d8e09162.jar" />
+    </item>
+
+</items>

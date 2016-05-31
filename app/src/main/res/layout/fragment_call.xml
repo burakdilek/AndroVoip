@@ -1,90 +1,143 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="android.msku.mskuproject.Contacts"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context="android.msku.mskuproject.Contacts">
-
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="129dp"
-        android:id="@+id/editText"
-        android:singleLine="true"
-        android:textSize="40dp"
-        android:enabled="false"
-        android:layout_alignParentTop="true"
-        />
-    <RelativeLayout
+>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
-    <TableLayout
-        android:id="@+id/tableLayout1"
-        android:gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        android:layout_margin="2dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-       >
-        <TableRow>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/bir_press"/>
 
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/iki_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/uc_press"/>
-        </TableRow><TableRow>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/dort_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/bes_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/alti_press"/>
-    </TableRow><TableRow>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/yedi_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/sekiz_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/dokuz_press"/>
-    </TableRow><TableRow>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/yildiz_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/sifir_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/diyez_press"/>
-    </TableRow><TableRow>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/delete_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:id="@+id/bos"
-            android:background="@drawable/bos_press"/>
-        <Button
-            style="@style/CustomButtonStyle"
-            android:background="@drawable/call_press"
-            android:id="@+id/callButton"/>
-    </TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
 
-   </TableLayout>
-    </RelativeLayout>
-</LinearLayout>
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="129dp"
+                android:layout_alignParentTop="true"
+                android:singleLine="true"
+                android:textSize="40dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <TableRow>
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="bir"
+                        android:text="1" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="iki"
+                        android:text="2" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="uc"
+                        android:text="3" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="dort"
+                        android:text="4" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="bes"
+                        android:text="5" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="alti"
+                        android:text="6" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="yedi"
+                        android:text="7" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="sekiz"
+                        android:text="8" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="dokuz"
+                        android:text="9" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="yildiz"
+                        android:text="*" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="sifir"
+                        android:text="0" />
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:onClick="diyez"
+                        android:text="#" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        style="@style/CustomButtonStyle"
+                        android:background="@drawable/backspacebutton"
+                        android:onClick="sil" />
+
+                    <Button
+                        android:id="@+id/bos"
+                        style="@style/CustomButtonStyle" />
+
+                    <Button
+                        android:id="@+id/callButton"
+                        style="@style/CustomButtonStyle"
+                        android:background="@drawable/callbutton"/>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

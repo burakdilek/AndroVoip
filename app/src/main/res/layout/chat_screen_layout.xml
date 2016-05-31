@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:id="@+id/toUsernamecon"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/toUsername"
+        android:layout_alignParentTop="true"
+        android:hint="Kime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gönder"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:id="@+id/yourMessagecon"
+        android:layout_above="@+id/sendButton"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/yourMessage"
+        android:hint="Mesaj Metni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</android.support.design.widget.TextInputLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toUsernamecon"
+        android:layout_above="@id/yourMessagecon"
+        android:id="@android:id/list"
+        android:divider="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/empty"/>
+
+</RelativeLayout>
