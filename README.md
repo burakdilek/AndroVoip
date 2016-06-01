@@ -2,9 +2,9 @@
 This is the Simple Softphone aplication based on android-ngn-stack library.
 
 **Project Owners:**
-Hamdi Burak Dilek
-Erkan Çetinkaya
-Elif Türkay 
+Hamdi Burak Dilek <br>
+Erkan Çetinkaya<br>
+Elif Türkay <br>
 
 **Features:**
 
@@ -20,3 +20,4 @@ Elif Türkay
 	- Add Contact
 	- Update Contact
 	- Delete Contact
+
