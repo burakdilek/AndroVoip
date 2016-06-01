@@ -1,7 +1,7 @@
 # AndroVoip
 This is the Simple Softphone aplication based on android-ngn-stack library.
 
-**Project Owners:**
+**Project Owners:** <br>
 Hamdi Burak Dilek <br>
 Erkan Çetinkaya<br>
 Elif Türkay <br>
@@ -20,4 +20,3 @@ Elif Türkay <br>
 	- Add Contact
 	- Update Contact
 	- Delete Contact
-
