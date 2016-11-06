@@ -45,7 +45,10 @@ Profil bilgilerinizi bir Obje içerisinde toplayıp Register etmek için server'
 
 ### Uygulama Arayüzü
 
-![image](./UIScreen/Screenshot_2016-05-26-15-49-12.png)
+![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png)
+![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png)
+![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png)
+![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png)
 
 > **Project Owners:**
 > - Hamdi Burak Dilek ---> https://github.com/hamdiburakdilek
