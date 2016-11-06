@@ -45,6 +45,8 @@ Profil bilgilerinizi bir Obje içerisinde toplayıp Register etmek için server'
 
 ### Uygulama Arayüzü
 
+<img src="./UIScreen/Screenshot_2016-05-26-15-49-12.png" width="50" height="100">
+
 ![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png =100x20)
 ![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png =100x20)
 ![Screenshot](./UIScreen/Screenshot_2016-05-26-15-49-12.png =100x20)
