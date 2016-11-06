@@ -45,10 +45,10 @@ Profil bilgilerinizi bir Obje içerisinde toplayıp Register etmek için server'
 
 ### Uygulama Arayüzü
 
-<img src="./UIScreen/Screenshot_2016-05-26-15-49-12.png" width="100" height="200">
-<img src="./UIScreen/Screenshot_2016-05-26-15-58-05.png" width="100" height="200">
-<img src="./UIScreen/Screenshot_2016-05-26-17-35-16.png" width="100" height="200">
-<img src="./UIScreen/Screenshot_2016-05-26-17-35-03.png" width="100" height="200">
+<img src="./UIScreen/Screenshot_2016-05-26-15-49-12.png" style="margin-left: 4px;" width="120" height="200">
+<img src="./UIScreen/Screenshot_2016-05-26-15-58-05.png" style="margin-left: 4px;" width="120" height="200">
+<img src="./UIScreen/Screenshot_2016-05-26-17-35-16.png" style="margin-left: 4px;" width="120" height="200">
+<img src="./UIScreen/Screenshot_2016-05-26-17-35-03.png" style="margin-left: 4px;" width="120" height="200">
 
 
 > **Project Owners:**
