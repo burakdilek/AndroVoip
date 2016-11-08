@@ -47,38 +47,7 @@ Not: Aynı kullanıcı ismiyle hesap oluşturmak zorunludur.
 
 ###   Activity Akısları
 
-```flow
-st=>start: Start
-e=>end
-op=>operation: Login Ekranı
-op1=>operation: Main Activity Arama Rehber Mesaj
-op2=>operation: Login Ekrans
-
-st->op->op1
-```
-
-```flow
-st=>start: Arama
-e=>end
-op=>condition: Arıyor Ekranı
-op1=>operation: Görüşme Başlar
-
-st->op
-op(yes)->st
-op(yes)->op1
-```
-
-```flow
-st=>start: Rehber
-e=>end
-op=>operation: Kişi Ekle (Kişi Adı & Kullanıcı Adı)
-op1=>operation: Kişiyi Ara 
-Kişiye Mesaj At 
-Kişiyi Düzenle 
-Kişiyi Sil 
-
-st->op->op1
-```
+<img src="./UIScreen/Screenshot from 2016-11-08 14-19-54.png" style="margin-left: 4px;" width="800" height="300">
 
 ###   Proje İçeriği
 
@@ -103,7 +72,7 @@ Profil bilgilerinizi bir Obje içerisinde toplayıp Register etmek için server'
 <img src="./UIScreen/Screenshot_2016-05-26-15-58-05.png" style="margin-left: 4px;" width="120" height="200">
 <img src="./UIScreen/Screenshot_2016-05-26-17-35-16.png" style="margin-left: 4px;" width="120" height="200">
 <img src="./UIScreen/Screenshot_2016-05-26-17-35-03.png" style="margin-left: 4px;" width="120" height="200">
-<img src="./UIScreen/Screenshot from 2016-11-08 14-19-54.png" style="margin-left: 4px;" width="500" height="200">
+
 
 
 
