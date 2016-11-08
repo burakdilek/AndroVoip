@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/the/Development/StudioProjects/mskusoftphone-doubango/app/libs/android-ngn-stack/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "outputFile": "/home/the/development/AndroidStudioProjects/AndroVoip/app/libs/android-ngn-stack/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 105
                 },
                 "from": {
-                    "file": "/home/the/Development/StudioProjects/mskusoftphone-doubango/app/libs/android-ngn-stack/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/the/development/AndroidStudioProjects/AndroVoip/app/libs/android-ngn-stack/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 155
                 },
                 "from": {
-                    "file": "/home/the/Development/StudioProjects/mskusoftphone-doubango/app/libs/android-ngn-stack/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/the/development/AndroidStudioProjects/AndroVoip/app/libs/android-ngn-stack/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
