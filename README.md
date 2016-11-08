@@ -56,6 +56,7 @@ op2=>operation: Login Ekrans
 
 st->op->op1
 ```
+
 ```flow
 st=>start: Arama
 e=>end
@@ -65,8 +66,8 @@ op1=>operation: Görüşme Başlar
 st->op
 op(yes)->st
 op(yes)->op1
-
 ```
+
 ```flow
 st=>start: Rehber
 e=>end
@@ -77,6 +78,7 @@ Kişiyi Düzenle
 Kişiyi Sil 
 
 st->op->op1
+```
 
 ###   Proje İçeriği
 
