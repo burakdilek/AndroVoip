@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="smack-android-4.1.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-android/4.1.3/736dcaa69d0781a36bdbdc32539a99e5fe121f02/smack-android-4.1.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-android/4.1.3/c26637e3c156b276a7eb82e274ee8a6c1ca24164/smack-android-4.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
