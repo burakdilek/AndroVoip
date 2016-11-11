@@ -20,8 +20,6 @@ Elif Türkay <br>
 	- Add Contact
 	- Update Contact
 	- Delete Contact
-=======
-This is the Simple Softphone application based on android-ngn-stack library.
 
 ###   Projenin Amacı
 
